@@ -1,0 +1,69 @@
+var positivos = 0;
+
+for(var i = 0; i < 6; i++){
+
+let v = gets();
+
+if (v > 0) { positivos++; }
+
+}
+
+console.log(positivos + " valores positivos");
+
+
+
+
+--------------------------------------------------------------------------
+
+
+
+let line = gets().split(" ");
+
+let A = parseInt(line[0]);
+
+for(var i = 2; i <= A; i= i+2 ){
+
+console.log( i )
+
+}
+
+
+-------------------------------------------------------------------------------
+
+let resultado = [0,0,0,0];
+for (let i = 0, numero = 0; i < 5; i++) {
+  numero = parseInt(gets());
+  resultado[(numero > 0)?numero % 2:numero % 2 * -1]++;
+  if(numero != 0)
+    (numero > 0)?resultado[2]++:resultado[3]++;
+}
+console.log(`${resultado[0]} valor(es) par(es)
+${resultado[1]} valor(es) impar(es)
+${resultado[2]} valor(es) positivo(s)
+${resultado[3]} valor(es) negativo(s)`)
+
+--------------------------------------------------------------------------------------------------
+let valor = parseInt(gets());
+let notas = [100,50,20,10,5,2,1];
+console.log(valor);
+for (i = 0; i < notas.length; i++) {
+  total = 0;
+  while (valor >= notas[i]) {
+    valor = valor - notas[i];
+    total++;
+  }
+  console.log(total + " nota(s) de R$ " + notas[i] +",00");
+}
+
+
+--------------------------------------------------------------------------
+
+let km = parseInt(gets());
+
+let l = parseFloat(gets());
+
+kml = km/l;
+
+
+
+console.log(kml.toFixed(3) + " km/l");
